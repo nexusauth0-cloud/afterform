@@ -27,13 +27,13 @@ export function SiteFooter() {
           <div className="lg:col-span-5">
             <Logo />
             <p className="mt-5 max-w-[34ch] text-[13px] leading-[1.7] text-graphite/58">
-              An independent footwear study in subtraction. One object, one
-              edition, released without restock.
+              An independent footwear concept in subtraction. One object, one
+              proposed edition, presented as a design study.
             </p>
             <p className="mt-5 font-mono text-[8px] uppercase leading-[1.8] tracking-[0.14em] text-graphite/40">
-              Concept label / Release 001
+              Fictional concept label / Release 001
               <br />
-              Not a commercial operation
+              Not a registered company or commercial operation
             </p>
           </div>
 

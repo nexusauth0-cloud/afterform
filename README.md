@@ -1,8 +1,12 @@
 # AFTERFORM 001 — “FORM FOLLOWS NOTHING.”
 
-A single-product sneaker release microsite for **AFTERFORM**, a fictional independent footwear label. This is a concept build: it exercises a complete premium commerce experience — campaign, product study, sizing, bag, checkout boundary and waitlist — without pretending to be a live store.
+**Live concept:** <https://afterform-six.vercel.app> · **Repository:** <https://github.com/nexusauth0-cloud/afterform>
 
-> **AFTERFORM is not a real brand.** Product specifications, inventory, pricing and campaign copy are illustrative. Reference photography shows third-party footwear and locations and is **not** production photography of an AFTERFORM product. See [`/credits`](http://localhost:3000/credits) and [Data & demo boundaries](#data--demo-boundaries).
+![AFTERFORM 001 — Form Follows Nothing.](app/opengraph-image.jpg)
+
+A single-product sneaker concept for **AFTERFORM**, a fictional independent footwear concept — not a registered company or live retailer. This is a design-study build: it exercises a complete premium commerce experience (campaign, product study, sizing, bag, checkout boundary and waitlist) without pretending to be an operating store.
+
+> **AFTERFORM is a fictional concept.** Product specifications, the proposed 300-pair edition, the 42-pair frontend demo allocation, pricing and campaign copy are illustrative. Reference photography shows third-party footwear and locations and is **not** production photography of an AFTERFORM product. See [credits](https://afterform-six.vercel.app/credits) and [Data & demo boundaries](#data--demo-boundaries).
 
 ---
 
@@ -14,6 +18,7 @@ A single-product sneaker release microsite for **AFTERFORM**, a fictional indepe
 - [Environment variables](#environment-variables)
 - [Routes](#routes)
 - [Drop states](#drop-states)
+- [Edition vs. frontend inventory](#edition-vs-frontend-inventory)
 - [Checkout boundary](#checkout-boundary)
 - [Waitlist delivery](#waitlist-delivery)
 - [Data & demo boundaries](#data--demo-boundaries)
@@ -134,6 +139,19 @@ The countdown is client-side and hydration-safe: the server renders a stable pla
 
 ---
 
+## Edition vs. frontend inventory
+
+These are separate concepts and are labelled separately in the interface:
+
+| Concept | Meaning |
+| --- | --- |
+| **Proposed campaign edition — 300 numbered pairs** | A fictional campaign premise. It is not a production run, a warehouse quantity or evidence of customer demand. |
+| **Frontend demo allocation — 42 pairs across 12 sizes** | Illustrative browser-only data used to exercise available, low-stock and sold-out states. It is not connected to a warehouse and is not reserved or decremented by checkout. |
+
+The product narrative may use “edition 001” and “no restock” as campaign language. Every commercial surface that could be mistaken for live stock is labelled as demo or illustrative.
+
+---
+
 ## Checkout boundary
 
 The bag is real client state, but **no order is created or stored**. The checkout screen summarizes lines, region, promo and totals, then calls `POST /api/checkout`.
@@ -165,12 +183,13 @@ There is no database. Configure a webhook/Resend for a functional capture flow, 
 Everything in this repository is a design study. Specifically:
 
 - **Product** — AFTERFORM 001 and its materials, mass, stack heights and construction notes are fictional targets, not a production datasheet.
-- **Inventory** — a fixed 42-pair demo allocation across 12 sizes, used to exercise available, low-stock and sold-out states. No warehouse connection.
+- **Edition** — the proposed 300-pair campaign edition is fictional. It is not a production run or warehouse quantity.
+- **Inventory** — a separate fixed 42-pair demo allocation across 12 sizes is used to exercise available, low-stock and sold-out states. No warehouse connection, and checkout does not reserve stock.
 - **Pricing** — €285, illustrative. Shipping rates and ETAs are illustrative.
 - **Orders** — no order record, fulfilment, tax calculation or stock reservation exists.
-- **Reviews / social proof** — none are fabricated; the site contains no customer reviews or sales claims.
+- **Reviews / social proof** — none are fabricated; the site contains no customer reviews, sales claims or customer-demand signals.
 - **Photography** — reference imagery only. See below.
-- **Brand** — AFTERFORM is fictional; no affiliation with any depicted footwear brand is claimed.
+- **Brand** — AFTERFORM is a fictional independent footwear concept and is not a registered company; no affiliation with any depicted footwear brand is claimed.
 
 These disclosures are repeated in the UI (`/credits`, lookbook captions, bag and checkout notes) rather than hidden in this file.
 

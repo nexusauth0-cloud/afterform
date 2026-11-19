@@ -95,8 +95,8 @@ export function CartDrawer() {
               <span className="text-outline-graphite">IS EMPTY.</span>
             </p>
             <p className="mt-4 max-w-[30ch] text-[12px] leading-[1.65] text-graphite/55">
-              Select a size in the release section to hold a pair. The demo
-              allocation is limited and held only in this browser.
+              Select a size in the release section to add a demo pair. The
+              illustrative allocation exists only in this browser.
             </p>
             <a
               href="#acquire"

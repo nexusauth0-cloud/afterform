@@ -222,7 +222,7 @@ export const product = {
   specDisclaimer:
     "Illustrative pre-production specification. Not a verified production datasheet. Materials, mass and construction are subject to change.",
   inventoryNote:
-    "Illustrative allocation for this concept release. Not live warehouse inventory.",
+    "The 300-pair edition is the proposed campaign premise, not a production run. Frontend availability is a 42-pair illustrative allocation — not live warehouse inventory.",
 } as const;
 
 export type Product = typeof product;

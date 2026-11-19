@@ -6,7 +6,8 @@ export function Ticker() {
   return (
     <div className="overflow-hidden border-y border-ink/15 bg-acid text-ink">
       <p className="sr-only">
-        AFTERFORM 001 — Form follows nothing. 300 numbered pairs. No restock.
+        AFTERFORM 001 — Form follows nothing. Proposed edition of 300 numbered
+        pairs. Concept release, no restock.
       </p>
       <div
         aria-hidden="true"

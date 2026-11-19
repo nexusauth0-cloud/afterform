@@ -111,7 +111,7 @@ export function Hero() {
             ) : null}
           </div>
           <span className="hidden shrink-0 font-mono text-[9px] uppercase tracking-[0.16em] text-ivory/35 sm:block">
-            {campaign.drop.displayDate} / {campaign.drop.editionSize} PAIRS
+            {campaign.drop.displayDate} / PROPOSED {campaign.drop.editionSize} PAIRS
           </span>
         </motion.div>
 

@@ -111,8 +111,8 @@ export function ProductInspector() {
                 <ArrowUpRight aria-hidden="true" className="size-3.5" />
               </ButtonLink>
               <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-graphite/40">
-                {formatPrice(product.priceCents, product.currency)} / EDITION{" "}
-                {product.editionSize}
+                {formatPrice(product.priceCents, product.currency)} / PROPOSED
+                EDITION {product.editionSize}
               </span>
             </div>
           </Reveal>
@@ -408,7 +408,7 @@ export function ProductInspector() {
               <div className="mt-7 flex items-end justify-between gap-4 border-t border-graphite/12 pt-5">
                 <div>
                   <p className="font-mono text-[8px] uppercase tracking-[0.15em] text-graphite/40">
-                    EDITION 001 / {product.editionSize}
+                    PROPOSED EDITION 001 / {product.editionSize}
                   </p>
                   <p className="mt-1 font-sans text-[20px] font-medium tracking-[-0.04em]">
                     {formatPrice(product.priceCents, product.currency)}

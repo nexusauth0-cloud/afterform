@@ -190,7 +190,7 @@ export async function POST(request: Request) {
     );
     params.set(
       `${key}[price_data][product_data][description]`,
-      `${product.colorway} · Edition ${product.editionSize} · Concept release`,
+      `${product.colorway} · Proposed edition ${product.editionSize} · Concept release`,
     );
     params.set(
       `${key}[price_data][product_data][images][0]`,

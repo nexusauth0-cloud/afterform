@@ -46,7 +46,7 @@ const plexMono = localFont({
 
 const title = "AFTERFORM 001 — Form Follows Nothing.";
 const description =
-  "A study in subtraction. Bonded technical knit, hollow-core EVA, one acid signal. Edition 001 — 300 numbered pairs, no restock. Concept footwear release.";
+  "An independent footwear concept: a study in subtraction, bonded technical knit, hollow-core EVA, one acid signal. Proposed edition of 300; demo inventory.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -64,10 +64,11 @@ export const metadata: Metadata = {
     "AFTERFORM 001",
     "technical footwear",
     "concept sneaker",
-    "limited edition",
+    "proposed edition",
     "graphite",
     "acid",
     "design study",
+    "concept storefront",
   ],
   openGraph: {
     type: "website",
@@ -121,18 +122,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Product",
-              name: product.name,
-              description: product.shortDescription,
-              brand: { "@type": "Brand", name: campaign.brand },
-              category: "Footwear",
-              offers: {
-                "@type": "Offer",
-                priceCurrency: product.currency,
-                price: (product.priceCents / 100).toFixed(2),
-                availability: "https://schema.org/LimitedAvailability",
-                url: siteUrl,
+              "@type": "CreativeWork",
+              name: title,
+              description,
+              genre: "Footwear design study",
+              url: siteUrl,
+              creator: {
+                "@type": "Organization",
+                name: campaign.brand,
+                description:
+                  "Fictional independent footwear concept. Not a registered company.",
               },
+              about: `${product.name} — ${product.shortDescription}`,
             }),
           }}
         />

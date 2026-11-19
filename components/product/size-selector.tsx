@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { Check } from "lucide-react";
+import { DEMO_ALLOCATION } from "@/data/inventory";
 import { product } from "@/data/product";
 import { getStockForSize, getStockStatus } from "@/lib/cart";
 import { useSelection } from "@/components/providers/selection-provider";
@@ -38,11 +39,14 @@ export function SizeSelector() {
         </span>
         <span className="flex items-center gap-1.5">
           <span aria-hidden="true" className="size-1.5 rounded-full bg-acid ring-1 ring-graphite/20" />
-          Low stock
+          Low / demo
         </span>
         <span className="flex items-center gap-1.5">
           <span aria-hidden="true" className="size-1.5 rounded-full border border-graphite/25" />
           Unavailable
+        </span>
+        <span className="w-full text-graphite/30 sm:w-auto">
+          Illustrative {DEMO_ALLOCATION}-pair allocation / not live stock
         </span>
       </div>
 
@@ -65,8 +69,8 @@ export function SizeSelector() {
                 disabled
                   ? ", unavailable"
                   : status === "low"
-                    ? `, low stock, ${stock} pairs remaining`
-                    : ", available"
+                    ? `, low in demo allocation, ${stock} pairs remaining`
+                    : ", available in demo allocation"
               }`}
               className={cn(
                 "group relative flex min-h-[72px] flex-col justify-between overflow-hidden border p-2.5 text-left transition-[background-color,border-color,color,opacity] duration-300 focus-visible:outline-2 focus-visible:outline-offset-2",
@@ -110,7 +114,7 @@ export function SizeSelector() {
               </span>
               {status === "low" && !selected ? (
                 <span className="mt-0.5 font-mono text-[7px] uppercase tracking-[0.1em] text-graphite/45">
-                  Low / {stock}
+                  Low / {stock} demo
                 </span>
               ) : null}
               {disabled ? (

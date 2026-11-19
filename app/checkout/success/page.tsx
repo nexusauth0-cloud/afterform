@@ -17,6 +17,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Checkout return",
   description: "Checkout return and Stripe verification for AFTERFORM 001.",
+  alternates: { canonical: "/checkout/success" },
   robots: { index: false, follow: false },
 };
 

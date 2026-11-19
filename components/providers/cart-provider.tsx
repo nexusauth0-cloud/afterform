@@ -102,7 +102,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
       const stock = getStockForSize(size);
       if (stock <= 0) {
-        return { ok: false, message: `US ${size} is currently unavailable.` };
+        return {
+          ok: false,
+          message: `US ${size} is unavailable in this demo allocation.`,
+        };
       }
 
       const requested = Math.max(1, Math.floor(Number(quantity) || 1));
@@ -114,8 +117,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
           ok: false,
           message:
             existing && existing.quantity >= stock
-              ? `Your bag already holds the last ${stock} pair${stock === 1 ? "" : "s"} in US ${size}.`
-              : `Only ${stock} pair${stock === 1 ? "" : "s"} available in US ${size}.`,
+              ? `Your bag already holds all ${stock} demo pair${stock === 1 ? "" : "s"} for US ${size}.`
+              : `Only ${stock} demo pair${stock === 1 ? "" : "s"} remain in US ${size}.`,
         };
       }
 

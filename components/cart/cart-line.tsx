@@ -52,7 +52,7 @@ export function CartLineItem({ line }: CartLineItemProps) {
                 : null}
             </p>
             <p className="mt-1 font-mono text-[7px] uppercase leading-[1.6] tracking-[0.1em] text-graphite/35">
-              {stock} demo pairs available
+              Illustrative demo stock / {stock} pairs
             </p>
           </div>
           <p className="shrink-0 font-mono text-[11px] tabular text-graphite/70">

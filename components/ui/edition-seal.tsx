@@ -19,7 +19,7 @@ export function EditionSeal({
     <svg
       viewBox="0 0 160 160"
       role="img"
-      aria-label="AFTERFORM 001 limited edition seal, 300 numbered pairs"
+      aria-label="AFTERFORM 001 concept edition seal, proposed 300 numbered pairs"
       className={cn("size-[132px]", className)}
     >
       <defs>
@@ -56,7 +56,7 @@ export function EditionSeal({
         }}
       >
         <textPath href={`#${pathId}`} startOffset="4%">
-          LIMITED RELEASE — 300 NUMBERED PAIRS — AFTERFORM —
+          CONCEPT EDITION — 300 PAIRS — AFTERFORM —
         </textPath>
       </text>
       <text

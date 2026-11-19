@@ -49,7 +49,7 @@ export function AcquireSection() {
       push({
         title: "Select a size first",
         description:
-          "Choose an available size so we can hold it in your bag.",
+          "Choose an available size to add a demo pair to your bag.",
         tone: "error",
       });
       focusSizeSelector();
@@ -59,7 +59,7 @@ export function AcquireSection() {
     if (selectedStatus === "out") {
       push({
         title: "Size unavailable",
-        description: `US ${selectedSize} is no longer available in this allocation.`,
+        description: `US ${selectedSize} is not available in this demo allocation.`,
         tone: "error",
       });
       focusSizeSelector();
@@ -100,7 +100,7 @@ export function AcquireSection() {
               />
               {previewSoldOut
                 ? "SOLD OUT / ARCHIVE PREVIEW"
-                : `${statusLabel} / ${unitsRemaining} DEMO PAIRS LOADED`}
+                : `${statusLabel} / ${unitsRemaining}-PAIR DEMO ALLOCATION`}
             </span>
           </div>
         </Reveal>
@@ -245,7 +245,8 @@ export function AcquireSection() {
                         SELECT SIZE / ADD TO BAG
                       </p>
                       <p className="mt-1 text-[12px] text-graphite/55">
-                        Edition 001 / {product.editionSize} numbered pairs
+                        Proposed edition 001 / {product.editionSize} numbered
+                        pairs
                       </p>
                     </div>
                     <span className="shrink-0 border border-acid bg-acid px-2 py-1 font-mono text-[8px] uppercase tracking-[0.12em] text-ink">
@@ -379,8 +380,8 @@ export function AcquireSection() {
                       </h3>
                       <p className="mt-4 max-w-[36ch] text-[12px] leading-[1.65] text-ivory/55">
                         {phase === "sold_out"
-                          ? "The demo allocation for release 001 is exhausted. No restock is planned. Join the line for the next release and studio dispatches."
-                          : "The release window for edition 001 has closed. No restock is planned. Join the line for the next release and studio dispatches."}
+                          ? "The demo allocation for release 001 is exhausted. No restock is planned in this campaign. Join the line for the next concept release and studio dispatches."
+                          : "The concept release window for edition 001 has closed. No restock is planned. Join the line for the next concept release and studio dispatches."}
                       </p>
                       {previewSoldOut ? (
                         <p className="mt-4 border border-acid/40 px-3 py-2 font-mono text-[8px] uppercase leading-[1.6] tracking-[0.12em] text-acid">

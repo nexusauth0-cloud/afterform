@@ -5,10 +5,36 @@ import { ArrowLeft, ArrowUpRight, Info } from "lucide-react";
 import { imageCredits } from "@/data/assets";
 import { SectionLabel } from "@/components/ui/section-label";
 
+const creditsTitle = "Credits & sources — AFTERFORM";
+const creditsDescription =
+  "Image, font, data and commerce notes for the AFTERFORM 001 independent footwear concept.";
+
 export const metadata: Metadata = {
   title: "Credits & sources",
-  description:
-    "Image, font, data and commerce notes for the AFTERFORM 001 concept release.",
+  description: creditsDescription,
+  alternates: { canonical: "/credits" },
+  openGraph: {
+    type: "website",
+    locale: "en_IE",
+    url: "/credits",
+    siteName: "AFTERFORM",
+    title: creditsTitle,
+    description: creditsDescription,
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AFTERFORM 001 — Form Follows Nothing concept campaign",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: creditsTitle,
+    description: creditsDescription,
+    images: ["/opengraph-image.jpg"],
+  },
 };
 
 interface CreditGroup {
@@ -86,12 +112,37 @@ export default function CreditsPage() {
           </div>
           <div className="flex flex-col justify-end lg:col-span-4">
             <p className="max-w-[40ch] text-[13px] leading-[1.7] text-graphite/60">
-              AFTERFORM is a fictional concept label. These notes disclose the
-              reference photography, typefaces and demo data used in this build.
+              AFTERFORM is a fictional independent footwear concept — not a
+              registered company. These notes disclose the reference
+              photography, typefaces and demo data used in this build.
             </p>
             <p className="mt-4 font-mono text-[8px] uppercase tracking-[0.13em] text-graphite/35">
               BUILD / NOVEMBER 2026 / RELEASE 001
             </p>
+            <dl className="mt-4 grid grid-cols-2 gap-4 border-t border-graphite/15 pt-4">
+              <div>
+                <dt className="font-mono text-[7px] uppercase tracking-[0.12em] text-graphite/40">
+                  Proposed campaign edition
+                </dt>
+                <dd className="mt-1 font-sans text-[15px] font-medium tracking-[-0.03em]">
+                  300 pairs
+                </dd>
+                <dd className="mt-0.5 text-[10px] leading-[1.5] text-graphite/45">
+                  Fictional premise
+                </dd>
+              </div>
+              <div>
+                <dt className="font-mono text-[7px] uppercase tracking-[0.12em] text-graphite/40">
+                  Frontend demo allocation
+                </dt>
+                <dd className="mt-1 font-sans text-[15px] font-medium tracking-[-0.03em]">
+                  42 pairs
+                </dd>
+                <dd className="mt-0.5 text-[10px] leading-[1.5] text-graphite/45">
+                  Illustrative UI state
+                </dd>
+              </div>
+            </dl>
           </div>
         </div>
 
@@ -203,12 +254,12 @@ export default function CreditsPage() {
                   body: "AFTERFORM 001 is a fictional design study. Specifications, mass, materials, fit and construction notes are illustrative targets, not a verified production datasheet.",
                 },
                 {
-                  label: "INVENTORY",
-                  body: "Stock figures are a 42-pair demo allocation used to exercise available, low-stock and sold-out states. There is no warehouse connection and no live inventory.",
+                  label: "EDITION VS INVENTORY",
+                  body: "The proposed campaign edition is 300 numbered pairs — a fictional premise, not a production run or warehouse stock. Frontend availability is a separate 42-pair demo allocation used to exercise available, low-stock and sold-out states. There is no warehouse connection or live inventory.",
                 },
                 {
                   label: "PRICE & PROMO",
-                  body: "Prices are shown in EUR. The FORM10 preview code takes 10% off the subtotal. Shipping rates and delivery estimates are illustrative.",
+                  body: "The €285 price is illustrative. The FORM10 preview code takes 10% off the subtotal. Shipping rates and delivery estimates are illustrative. No sales, customer demand or order volume is represented.",
                 },
                 {
                   label: "CHECKOUT",
@@ -247,9 +298,9 @@ export default function CreditsPage() {
           />
           <p className="max-w-[92ch] font-mono text-[8px] uppercase leading-[1.8] tracking-[0.1em] text-graphite/50">
             No affiliation with any footwear brand, payment provider, font
-            foundry or photographer is claimed. The AFTERFORM name, campaign
-            copy and product concept are fictional and presented for design
-            demonstration.
+            foundry or photographer is claimed. AFTERFORM is not a registered
+            company. Its name, campaign copy, proposed edition and product
+            concept are fictional and presented for design demonstration.
           </p>
         </div>
       </div>

@@ -11,7 +11,7 @@ export function AnnouncementBar() {
           AFTERFORM / RELEASE 001
         </p>
         <p className="truncate font-mono text-[9px] uppercase tracking-[0.14em] sm:hidden">
-          001 — 300 PAIRS — NO RESTOCK
+          001 — PROPOSED EDITION / 300
         </p>
         <p className="hidden truncate font-mono text-[9px] uppercase tracking-[0.14em] sm:block">
           {campaign.announcement.primary} — {campaign.announcement.secondary}

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Checkout",
   description:
     "Review AFTERFORM 001 and continue to the Stripe checkout boundary when configured.",
+  alternates: { canonical: "/checkout" },
   robots: { index: false, follow: false },
 };
 
