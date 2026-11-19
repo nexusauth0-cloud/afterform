@@ -1,0 +1,68 @@
+import { assets } from "@/data/assets";
+import type { LookbookItem } from "@/types";
+
+export const lookbook: LookbookItem[] = [
+  {
+    id: "on-foot",
+    image: assets.lookOnfoot.src,
+    alt: assets.lookOnfoot.alt,
+    title: "On foot / 01",
+    caption: "High-top study, glass and concrete. Reference styling.",
+    format: "landscape",
+    source: assets.lookOnfoot.source,
+  },
+  {
+    id: "field-portrait",
+    image: assets.lookPortrait.src,
+    alt: assets.lookPortrait.alt,
+    title: "Field portrait / 02",
+    caption: "Black leather, brick, no gloss. Campaign reference.",
+    format: "portrait",
+    source: assets.lookPortrait.source,
+  },
+  {
+    id: "material",
+    image: assets.lookMaterial.src,
+    alt: assets.lookMaterial.alt,
+    title: "Material / 03",
+    caption: "Open knit, acid underlay. Material reference.",
+    format: "square",
+    source: assets.lookMaterial.source,
+  },
+  {
+    id: "packaging",
+    image: assets.lookPackaging.src,
+    alt: assets.lookPackaging.alt,
+    title: "Packing / 04",
+    caption: "Uncoated board, no excess. Packaging direction.",
+    format: "tall",
+    source: assets.lookPackaging.source,
+  },
+  {
+    id: "studio",
+    image: assets.lookStudio.src,
+    alt: assets.lookStudio.alt,
+    title: "Studio / 05",
+    caption: "Weight, shadow, one white sphere. Studio reference.",
+    format: "square",
+    source: assets.lookStudio.source,
+  },
+  {
+    id: "court",
+    image: assets.lookCourt.src,
+    alt: assets.lookCourt.alt,
+    title: "Court / 06",
+    caption: "A pair at rest on a painted line. Archive reference.",
+    format: "landscape",
+    source: assets.lookCourt.source,
+  },
+  {
+    id: "architecture",
+    image: assets.lookArchitecture.src,
+    alt: assets.lookArchitecture.alt,
+    title: "Structure / 07",
+    caption: "Faceted volume, pale metal. Architectural reference.",
+    format: "wide",
+    source: assets.lookArchitecture.source,
+  },
+];
